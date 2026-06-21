@@ -386,6 +386,7 @@ screen main_menu():
             action ShowMenu("load")
             xsize 300
             ysize 95
+            
 
         imagebutton:
             idle "opciones1.png"
@@ -414,17 +415,9 @@ screen main_menu():
             action Quit(confirm=True)
             xsize 320
             ysize 95
-    if gui.show_name:
-
-        vbox:
-            style "main_menu_vbox"
-
-            text "[config.name!t]":
-                style "main_menu_title"
-
-            text "[config.version]":
-                style "main_menu_version"
-
+       
+    #imagen como titulo 
+    add  "images/ti/titulo.png"     xalign 0.5  yalign 0.1  
 
 style main_menu_frame is empty
 style main_menu_vbox is vbox
