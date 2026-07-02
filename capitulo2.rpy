@@ -1,6 +1,7 @@
 # CAPÍTULO 2: 
 label capitulo2:
-    scene busia
+    #escena del bus
+    scene interb3
     "CAPÍTULO 2: CONOCIENDO EL LUGAR Y A MI ABUELO"
    
     "(Sigues en el bus)"
@@ -10,8 +11,12 @@ label capitulo2:
     "Quedas asombrado. El Lago Llanquihue refleja el brillo del sol como un espejo gigante. A lo lejos, imponente y nevado, se alza el Volcán Osorno."
     
     tu "¡Guau!"
+
+    scene interb4
     
     "El bus sigue su trayecto. Pasan bosques nativos, ríos cristalinos y casas humildes dispersas."
+    
+    scene interb2
     
     "En una de las paradas suben y bajan pasajeros. Una chica de tu edad llama especialmente tu atención: cabello oscuro, mirada tranquila, típica de la zona."
   
@@ -22,7 +27,9 @@ label capitulo2:
     tu "(pensando) Ya pasé por esto… Mejor trato de ignorar su belleza."
     
     "(Pasan unos minutos más.)"
-    
+
+    scene bia
+
     "A lo lejos ves tu destino. Un cartel de madera aparece en el camino:"
     
     "«Villa Santa María de las Cenizas — Población: 1250 habitantes»"
@@ -32,8 +39,8 @@ label capitulo2:
     tu "Es chiquito… pero tiene su encanto."
 
 
-    #scene termnial de buses Villa santa maria de las cenizas
-    scene villaia
+    #escena termnial de buses Villa santa maria de las cenizas
+    scene esta2
     
     "El bus se detiene. Te bajas con tu maleta. El aire frío y limpio te golpea la cara."
     
@@ -64,7 +71,7 @@ label capitulo2:
     "(Te armás de valor y respondes con la frente en alto.)"
 
 
-        #CUARTA DECISION
+        #CUARTA DECISION decides seguir con tu abuelo o no
     menu:
         "¿Qué respondes?"
 
@@ -81,12 +88,14 @@ label capitulo2:
     abu "Uta la lesera, si estai terrible flaco cabro."
     
     "(Decides cruzar la calle por tu cuenta. No ves bien un auto que venía...)"
-    #sonido de choque
-    
+
+    #Final te atropellaron
     "Te atropella."
-    
+    scene atropello
     "Fin de la historia. final arrebatamiento"
     return
+
+    #continua la historia
 label decision_si_comer:
 
 
@@ -96,12 +105,14 @@ label decision_si_comer:
     
     abu "Esa vieja uta que tiene buena mano, ya verás nieto."
     
+    scene rest
     "(Te vas caminando junto a tu abuelo hacia el restaurante.)"
     
-    tu "Sí, sería piola."
+    tu "Sí, se ve piola."
 
 
-    #resntaurante
+    # Escena resntaurante
+    scene cazue
     "(En el restaurante, te sirven un plato de cazuela humeante.)"
     
     tu "(pensando) ¿Quién come cazuela como desayuno?"
@@ -122,7 +133,7 @@ label decision_si_comer:
     # Continúa el recorrido
     
     "(Después de comer, te subes con tu abuelo a su vieja camioneta.)"
-    
+    scene cea
     abu "Por acá está la iglesia, con la estatua de la virgen… Por acá la gente que ayuda con los cultivos, una carnicería, de acá sacaron los pollos pa’ la cazuela."
     
     "(De repente la camioneta se frena en seco.)"
@@ -136,7 +147,7 @@ label decision_si_comer:
 
     "(El abuelo maneja hasta el museo sin dejar de hablar. Pareciera que se había guardado años de palabras y ahora las está sacando todas para su nieto)"
 
-
+    scene muse
     abu "Este es el museo, nietecito. Acá en el pueblito tenemos cualquier historia…"
     
     abu "Hubo una vez hace años que creímos que iba a explotar el Volcán Osorno… quedó la caga’ ese día. Y cuando fue el terremoto del 60, jue fuerte aquí poh."

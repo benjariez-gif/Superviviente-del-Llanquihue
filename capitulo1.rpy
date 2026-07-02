@@ -1,12 +1,13 @@
 # CAPÍTULO 1: INTRODUCCIÓN
 label capitulo1:
-
-    scene Sueño with fade
+    
+    scene sue with fade
     " Superviviente del llanquihue"
-    "esto es un version no terminada "
+    
     "CAPITULO1:INTRODUCCION"
-   
-    scene Sueño
+    #Escena inical sueño del protagonista
+    play music sssueño
+    scene sue
     "En un vasto entorno donde la tierra es blanca y pura, un río cristalino la atraviesa."
 
     "El cielo dorado brilla con una calidez que nunca habías sentido."
@@ -23,14 +24,24 @@ label capitulo1:
    
     "Detrás de ella aparecen unos niños hermosos como flores en primavera."
     
+   
     "Tu corazón palpita con fuerza. Miles de recuerdos invaden tu mente: abrazos, risas, besos, caricias… toda una vida llena de amor y éxitos."
-    #sonido pum
-    "¡PUM!"
     
-    "Algo golpea tu techo con fuerza."
- 
-    scene piezab
+    #Despertar brusco mañana
+    stop music
+    play sound glata
+    "¡PUM!"
 
+    
+    scene piezaos with vpunch
+    with flash        
+    
+    pause 0.3
+    with flash          
+
+    "Algo golpea tu techo con fuerza."
+     
+    #dialogo interno
     "(Son las 7 de la mañana)"
     
     tu "(bostezo largo y cansado) Ahhh… ¿Qué hora es…?"
@@ -42,6 +53,9 @@ label capitulo1:
     "(Abres Instagram casi por instinto. Ves fotos de ella en fiestas, comiendo con amigos y con otro chico…)"
     
     tu "(pensando) Es tan hermosa… Lástima que ni siquiera me conoce. Además, yo soy un desastre."
+
+    scene piezaos with dissolve
+    
     
     "(Miras tu habitación: está oscura, desordenada y sucia.)"
     
@@ -56,7 +70,9 @@ label capitulo1:
     tu "Lo único que hago es jugar o ver algo para olvidarme de todo esto…"
    
     "(Te escondes como una oruga entre las sábanas y duermes llorando.)"
-    
+     
+    #Tarde dialogo con la madre
+    scene piezalu with fade
     "(Son las 3 de la tarde y todavía no te has levantado.)"
     
     ma "Buenos días, mi hijo querido."
@@ -65,10 +81,13 @@ label capitulo1:
     
     ma "¿Hijo?"
     
+    play sound puerta1
     "(Toca suavemente la puerta)"
     
     ma "Hijo, despierta por favor… o al menos dime algo."
-    
+
+    play sound puerta2
+
     "(Toca más fuerte)"
    
     ma "¡Levántate! Ya es tarde."
@@ -97,7 +116,7 @@ label capitulo1:
     
     ma "Esta podría ser una buena oportunidad para cambiar un poco las cosas. ¿Qué opinas? ¿Quieres ir?"
 
-
+    #Primera decision/ ir o no ir /con el abuelo
     label discucion_madre:
     $ intentos = 0  
     ma"Entonces, ¿vas a ir con tu abuelo"
@@ -143,19 +162,23 @@ label capitulo1:
 
                 jump ruta_si_va
         label ma_se_rinde:
+        
+        #Final rapido decides no ir
         ma "Está bien, no te insisto más."
+        scene vago with fade
         ma "Te quedas en la casa, pero vamos a hablar de esto cuando venga tu padre."
         "Fin de la novela (Final malo rapido) ERES UN VAGO"
        
         return  
 
-
+        #continua la historia
         label ruta_si_va:
         ma "¡Qué bien, hijo mío! Empaca tus cosas, te vas mañana mismo."
         ma "Recuerda que te vas a la Región de Los Lagos."
         tu "Ya mamá, voy a hacerlo… pero primero voy a comer."
         ma"Está bien, hijo."
-        #SEGUNDA DECISION
+        #SEGUNDA DECISION decartada
+
         #(Equipamiento básico que puedes llevar)
         #Tu: A ver qué puedo meter en mi maleta…
         #Ropa: ¿Cálida y ligera o impermeable?(Cl/I)
@@ -183,8 +206,8 @@ label capitulo1:
         
         "(Observas tu maleta. Sientes intriga por lo que te espera en los próximos días.)"
 
-
-        #scene estacion de buses Tu ciudad
+    #Estacion  de buses santiago
+    scene estacion with fade
    
     "( Al día siguiente)"
    
@@ -231,7 +254,8 @@ label capitulo1:
     ma "¿Me llamas cuando llegues, sí?"
     
     tu "Sí, obvio que lo voy a hacer."
-    
+
+    scene interb1
     "(Subes al bus y tomas tu asiento junto a la ventana.)"
     
     "Los nervios y las náuseas recorren tu cuerpo. Sientes un nudo en el estómago."
